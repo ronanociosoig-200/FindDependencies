@@ -1,7 +1,7 @@
 # FindDependencies
 A CLI to find and list out the dependents and dependencies for a module in a Tuist project by parsing the graph.
 
-It is intended as a tool for generating code with Sourcery, or in testing by checking which modules depend on it. 
+I developed it as a helper tool for a script that is a wrapper for generating code with Sourcery, but it could be used in a CI workflow for checking which modules depend on it. 
 
 USAGE: find-dependencies [--show-dependencies] [--show-dependents] [--debug] [--path &#60;path&#62;] &#60;module-name&#62;
 
