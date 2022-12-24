@@ -49,7 +49,9 @@ struct FindDependencies: ParsableCommand {
             let output = try safeShell("which tuist")
 
             if output.contains(tuistPath) {
-                if debug { print("Tuist is installed OK") }
+                if debug {
+                    Logger.process.debug("Tuist is installed OK")
+                }
             } else {
                 Logger.process.error("Sorry, this isn't going to work. You need tuist installed at /usr/bin/local")
                 FindDependencies.exit(withError: 0 as? Error)
@@ -78,6 +80,10 @@ struct FindDependencies: ParsableCommand {
             }
         } else {
             defaultPath = "./"
+        }
+        
+        if debug {
+            Logger.process.debug("Default path: \(defaultPath)")
         }
         
         if let path = path {
@@ -173,13 +179,16 @@ struct FindDependencies: ParsableCommand {
     
     func trimDependency(dependency: TargetDependency) {
         let dependencyExtracted = "\(dependency)"
+        if debug {
+            Logger.process.debug("trimDependency: \(dependencyExtracted)")
+        }
         let startingString = "target(name: \""
         let offset = dependencyExtracted.count - startingString.count
         let trimmed = dependencyExtracted.suffix(offset)
         if debug {
             Logger.process.debug("Dependency: \(trimmed.dropLast(2))")
         } else {
-            Logger.process.info("\(trimmed.dropLast(2))")
+            print("\(trimmed.dropLast(2))")
         }
     }
     

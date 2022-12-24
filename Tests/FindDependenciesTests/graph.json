@@ -1,0 +1,502 @@
+{
+  "name" : "Pokedex",
+  "path" : "/Users/ronanoc/Projects/Tuist-Pokedex",
+  "projects" : {
+    "/Users/ronanoc/Projects/Tuist-Pokedex" : {
+      "isExternal" : false,
+      "name" : "Pokedex",
+      "packages" : [
+
+      ],
+      "path" : "/Users/ronanoc/Projects/Tuist-Pokedex",
+      "schemes" : [
+        {
+          "name" : "PokedexAsyncNetworkTesting",
+          "testActionTargets" : [
+
+          ]
+        },
+        {
+          "name" : "PokedexUITesting",
+          "testActionTargets" : [
+            "PokedexUITests"
+          ]
+        }
+      ],
+      "targets" : [
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Haneke"
+              }
+            },
+            {
+              "target" : {
+                "name" : "Home"
+              }
+            },
+            {
+              "target" : {
+                "name" : "Backpack"
+              }
+            },
+            {
+              "target" : {
+                "name" : "Detail"
+              }
+            },
+            {
+              "target" : {
+                "name" : "Catch"
+              }
+            },
+            {
+              "target" : {
+                "name" : "Common"
+              }
+            },
+            {
+              "target" : {
+                "name" : "NetworkKit"
+              }
+            },
+            {
+              "project" : {
+                "path" : "/Users/ronanoc/Projects/Tuist-Pokedex/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/JGProgressHUD",
+                "target" : "JGProgressHUD"
+              }
+            }
+          ],
+          "name" : "Pokedex",
+          "product" : "app",
+          "resources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Resources/Assets.xcassets",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Resources/Base.lproj/LaunchScreen.storyboard"
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Sources/Core/DataProviderExtension.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Sources/Core/AppDelegate.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Sources/Core/Log.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Sources/Core/AppController.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Sources/Core/Coordinator.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Pokedex"
+              }
+            }
+          ],
+          "name" : "PokedexTests",
+          "product" : "unit_tests",
+          "resources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Tests/Mocks/Pokemon12.json",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Tests/Mocks/Pokemon5.json",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Tests/Mocks/Pokemon12.png",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Tests/Mocks/Pokemon5.png"
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Tests/AppDataTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Tests/Mocks/MockData.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Tests/PokemonConverterTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/Tests/GeneratorTests.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Pokedex"
+              }
+            }
+          ],
+          "name" : "PokedexUITests",
+          "product" : "ui_tests",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/UITests/PokedexAsyncSearchUITests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/UITests/Server_401_Error_UITest.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Pokedex/UITests/PokedexUITests.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+
+          ],
+          "name" : "Haneke",
+          "product" : "framework",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Sources/UIImageView+Haneke.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Sources/HNKNetworkFetcher.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Sources/UIButton+Haneke.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Sources/HNKDiskCache.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Sources/HNKDiskFetcher.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Sources/HNKCache.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Sources/HNKSimpleFetcher.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Sources/UIView+Haneke.m"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Haneke"
+              }
+            }
+          ],
+          "name" : "HanekeTests",
+          "product" : "unit_tests",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/HNKDiskFetcherTests.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/HNKCacheTests.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/UIImage+HanekeTests.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/HNKDiskCacheTests.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/UIView+HanekeTests.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/UIImage+HanekeTestUtils.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/NSString+HanekeTests.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/HNKSimpleFetcherTests.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/UIImageView+HanekeTests.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/UIButton+HanekeTests.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/XCTestCase+HanekeTestUtils.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/HNKNetworkFetcherTests.m",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Haneke/Tests/HNKCache+HanekeTestUtils.m"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Common"
+              }
+            }
+          ],
+          "name" : "Home",
+          "product" : "framework",
+          "resources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Sources/Scenes/Home Scene/HomeViewController.storyboard",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Resources/Assets.xcassets"
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Sources/Scenes/Home Scene/HomeWireframe.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Sources/Scenes/Home Scene/HomePresenter.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Sources/Scenes/Home Scene/HomeViewController.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Sources/Scenes/Home Scene/HomeDataProvider.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Sources/Scenes/Home Scene/HomeActions.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Home"
+              }
+            }
+          ],
+          "name" : "HomeTests",
+          "product" : "unit_tests",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Tests/HomeWireframeTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Tests/HomeActionsTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Tests/Mocks.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Tests/Mocks/AutoMockable.generated.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Tests/HomeViewControllerTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Tests/HomePresenterTests.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Common"
+              }
+            },
+            {
+              "target" : {
+                "name" : "Haneke"
+              }
+            }
+          ],
+          "name" : "Backpack",
+          "product" : "framework",
+          "resources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Resources/Assets.xcassets",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Sources/Scenes/Backpack Scene/Cells/PokemonCollectionViewCell.xib",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Sources/Scenes/Backpack Scene/BackpackViewController.storyboard"
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Sources/Scenes/Backpack Scene/BackpackActions.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Sources/Scenes/Backpack Scene/BackpackViewController.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Sources/Scenes/Backpack Scene/BackpackWireframe.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Sources/Scenes/Backpack Scene/BackpackDataSource.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Sources/Scenes/Backpack Scene/BackpackDataProvider.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Sources/Scenes/Backpack Scene/BackpackDelegate.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Sources/Scenes/Backpack Scene/Cells/PokemonCollectionViewCell.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Sources/Scenes/Backpack Scene/BackpackPresenter.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Backpack"
+              }
+            }
+          ],
+          "name" : "BackpackTests",
+          "product" : "unit_tests",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Tests/BackpackWireframeTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Tests/BackpackDelegateTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Tests/BackpackPresenterTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Tests/BackpackDataSourceTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Tests/BackpackActionsTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Tests/BackpackViewControllerTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Tests/BackpackDataProviderTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Tests/Mocks/AutoMockable.generated.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Backpack/Tests/Mocks.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Common"
+              }
+            },
+            {
+              "target" : {
+                "name" : "Haneke"
+              }
+            }
+          ],
+          "name" : "Detail",
+          "product" : "framework",
+          "resources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Detail/Sources/Scenes/Pokemon Detail Scene/PokemonDetailViewController.storyboard"
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Detail/Sources/Scenes/Pokemon Detail Scene/PokemonDetailPresenter.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Detail/Sources/Scenes/Pokemon Detail Scene/PokemonDetailViewController.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Detail/Sources/Scenes/Pokemon Detail Scene/PokemonDetailWireframe.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Detail"
+              }
+            }
+          ],
+          "name" : "DetailTests",
+          "product" : "unit_tests",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Detail/Tests/DetailPresenterTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Detail/Tests/DetailTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Detail/Tests/DetailWireframeTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Detail/Tests/MockPokemonFactory.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Detail/Tests/DetailViewControllerTests.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Common"
+              }
+            },
+            {
+              "target" : {
+                "name" : "Haneke"
+              }
+            }
+          ],
+          "name" : "Catch",
+          "product" : "framework",
+          "resources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Resources/Assets.xcassets",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Sources/Scenes/Catch Scene/CatchViewController.storyboard"
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Sources/Scenes/Catch Scene/CatchPresenter.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Sources/Scenes/Catch Scene/CatchWireframe.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Sources/Scenes/Catch Scene/CatchActions.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Sources/Scenes/Catch Scene/CatchViewController.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Sources/Scenes/Catch Scene/CatchDataProvider.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Catch"
+              }
+            }
+          ],
+          "name" : "CatchTests",
+          "product" : "unit_tests",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Tests/CatchPresenterTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Tests/Mocks.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Tests/CatchWireframeTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Tests/CatchTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Tests/CatchDataProviderTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Tests/MockPokemonFactory.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Tests/CatchViewControllerTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Catch/Tests/CatchActionsTests.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+
+          ],
+          "name" : "Common",
+          "product" : "framework",
+          "resources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Views/PokemonView.xib"
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Core/Actions.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Core/DataProvider.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Core/Configuration.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Model/ScreenPokemon.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Core/Notifier.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Extensions/UITableViewCell+Extension.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Model/Pokemon.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Extensions/UIViewController+StoryboardInstantiable.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Util/Generator.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Util/FileStorage.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Extensions/Loadable.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Util/Storage.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Core/Updatable.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Views/PokemonView.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Core/Coordinating.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Core/AppData.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Core/Constants.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Core/DataProviding.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Model/LocalPokemon.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Extensions/UIBarButtonItem+Extension.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Sources/Util/PokemonConverter.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "Common"
+              }
+            }
+          ],
+          "name" : "CommonTests",
+          "product" : "unit_tests",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Tests/DataProviderTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Tests/CommonTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Tests/MockPokemonFactory.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Tests/ActionsTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Tests/AppDataTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Tests/PokemonConverterTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Common/Tests/Mocks.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+
+          ],
+          "name" : "NetworkKit",
+          "product" : "framework",
+          "resources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Resources/Pokemon5.json"
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Sources/Services/PokemonSearchEndpoint+FactoryMethods.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Sources/Services/PokemonSearchEndpoint.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Sources/Mock/MockData.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Sources/Core/Constants.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Sources/Core/Configuration.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Sources/Services/PokemonSearchService.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "NetworkKit"
+              }
+            }
+          ],
+          "name" : "NetworkKitTests",
+          "product" : "unit_tests",
+          "resources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Tests/Mock/Pokemon5.json"
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Tests/NetworkKitTests.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Tests/URLProtocolMock.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Tests/MockSessionFactory.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Network/Tests/Mock/MockData.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+
+          ],
+          "name" : "HomeExample",
+          "product" : "app",
+          "resources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Example/Resources/Assets.xcassets",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Example/Resources/Base.lproj/LaunchScreen.storyboard"
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Example/Sources/Coordinator.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Example/Sources/AppController.swift",
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/Example/Sources/AppDelegate.swift"
+          ]
+        },
+        {
+          "dependencies" : [
+            {
+              "target" : {
+                "name" : "HomeExample"
+              }
+            }
+          ],
+          "name" : "HomeExample_UITests",
+          "product" : "ui_tests",
+          "resources" : [
+
+          ],
+          "sources" : [
+            "/Users/ronanoc/Projects/Tuist-Pokedex/Features/Home/UITests/FakeUITests.swift"
+          ]
+        }
+      ]
+    }
+  }
+}
