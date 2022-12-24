@@ -9,11 +9,11 @@ ARGUMENTS:
   &#60;module-name&#62;           The module you are interested in.
 
 OPTIONS:
-  --show-dependencies     Show the dependencies of named module.
-  --show-dependents       Show the dependents of named module.
-  -d, --debug             Show the dependents of named module.
-  -p, --path <path>       The path to the Project.swift file.
-  -h, --help              Show help information.
+  --show-dependencies     Show the dependencies of named module.<br>
+  --show-dependents       Show the dependents of named module.<br>
+  -d, --debug             Show the dependents of named module.<br>
+  -p, --path <path>       The path to the Project.swift file.<br>
+  -h, --help              Show help information.<br><br>
   
 I had some issue with using Tuist.graph() so I opted for triggering the graph command to write a JSON file. But this seems to be a problem when the path parameter is used, which means the command must be invoked in the same directory as the Project.swift file. Thus, this command expects a graph.json to exist at the path passed to it. 
 
