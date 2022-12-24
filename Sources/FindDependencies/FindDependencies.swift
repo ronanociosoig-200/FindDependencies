@@ -86,21 +86,22 @@ struct FindDependencies: ParsableCommand {
             Logger.process.debug("Default path: \(defaultPath)")
         }
         
-        if let path = path {
-            let output = try safeShell("file " + defaultPath + project)
-            
-            if output.contains(error) {
-                Logger.process.error("Path Error: \(error). Ensure that \(project) can be found at the specified path: \(path)")
-                FindDependencies.exit(withError: 0 as? Error)
-            }
-        } else {
-            let output = try safeShell("file ./" + project)
-            
-            if output.contains(error) {
-                Logger.process.error("Path Error: \(error). Ensure that \(project) can be found at the current directory, or pass a path parameter.")
-                FindDependencies.exit(withError: 0 as? Error)
-            }
-        }
+        // Check the Project.swift file
+//        if let path = path {
+//            let output = try safeShell("file " + defaultPath + project)
+//
+//            if output.contains(error) {
+//                Logger.process.error("Path Error: \(error). Ensure that \(project) can be found at the specified path: \(path)")
+//                FindDependencies.exit(withError: 0 as? Error)
+//            }
+//        } else {
+//            let output = try safeShell("file ./" + project)
+//
+//            if output.contains(error) {
+//                Logger.process.error("Path Error: \(error). Ensure that \(project) can be found at the current directory, or pass a path parameter.")
+//                FindDependencies.exit(withError: 0 as? Error)
+//            }
+//        }
         
         // The graph command seems to only work
 //        do {
