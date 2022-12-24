@@ -61,7 +61,7 @@ struct FindDependencies: ParsableCommand {
             Logger.process.error("\(error)") //handle or silence the error here
         }
         
-        let error = "No such file or directory"
+        // let error = "No such file or directory"
         let defaultPath: String
         
         if debug {
@@ -172,9 +172,8 @@ struct FindDependencies: ParsableCommand {
         if parsedDependency.contains(moduleName) {
             if debug {
                 Logger.process.debug("Dependant: \(target.name)")
-            } else {
-                Logger.process.info("\(target.name)")
             }
+            print("\(target.name)")
         }
     }
     
@@ -188,9 +187,8 @@ struct FindDependencies: ParsableCommand {
         let trimmed = dependencyExtracted.suffix(offset)
         if debug {
             Logger.process.debug("Dependency: \(trimmed.dropLast(2))")
-        } else {
-            print("\(trimmed.dropLast(2))")
         }
+        print("\(trimmed.dropLast(2))")
     }
     
     @discardableResult // Add to suppress warnings when you don't want/need a result
