@@ -20,7 +20,15 @@ I had some issue with using Tuist.graph() so I opted for triggering the graph co
 An improvement would be to use the Tuist.graph() directly. 
 
 ## Testing
+  
+The testing is based on the project graph found under Tests/FindDependenciesTests
 
+The JSON file has a visual PNG representation
+  
+![project graph](graph.png)
+
+Test 1: Show Dependencies
+  
 Open the project and edit the scheme. Add an argument passed on launch: 
 ```
 --show-dependencies -p ../../../../Tests/FindDependenciesTests Backpack
@@ -32,6 +40,24 @@ You will see this in the console output in Xcode
 Common
 Haneke
 ```
+
+Test 2: Show Dependents
+  
+Edit the scheme again, disable the previous argument, and add another argument:
+```
+  --show-dependents -p ../../../../Tests/FindDependenciesTests Common
+```
+  
+This produces the following output: 
+```
+Pokedex
+Home
+Backpack
+Detail
+Catch
+CommonTests
+```
+  
 
 ## Known Issues
 This code works for framework targets but not work as intended for the main app target in that it will not output a trimmed target name and it does not filter out external dependencies. 
