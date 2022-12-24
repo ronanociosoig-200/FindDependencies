@@ -3,10 +3,10 @@ A CLI to find and list out the dependents and dependencies for a module in a Tui
 
 It is intended as a tool for generating code with Sourcery, or in testing by checking which modules depend on it. 
 
-USAGE: find-dependencies [--show-dependencies] [--show-dependents] [--debug] [--path <path>] <module-name>
+USAGE: find-dependencies [--show-dependencies] [--show-dependents] [--debug] [--path &#60;path&#62;] &#60;module-name&#62;
 
 ARGUMENTS:
-  <module-name>           The module you are interested in.
+  &#60;module-name&#62;           The module you are interested in.
 
 OPTIONS:
   --show-dependencies     Show the dependencies of named module.
